@@ -14,6 +14,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <UserCard user={this.state.user} />
+        <h1>{this.state.user.login}'s Followers</h1>
         <Followers followers={this.state.followers} />
       </div>
     );
@@ -36,7 +37,6 @@ class App extends React.Component {
     fetch('https://api.github.com/users/dcornelison1216/followers')
       .then(res => res.json())
       .then(followers => {
-        console.log('followers', followers);
         if(followers.status === 'error') {
           this.setState({ error: followers.message});
         } else {

@@ -3,14 +3,15 @@ import { FollowersDiv, FollowerCard, FollowerImg } from './AppStyles';
 
 class Followers extends React.Component {
   render() {
-    console.log('this.props.followers', this.props.followers)
     return (
         <FollowersDiv>
           {this.props.followers.map(follower => {
             return(
-              <FollowerCard>
+              <FollowerCard key={follower.url}>
                 <FollowerImg src={follower.avatar_url}></FollowerImg>
-                <p>{follower.login}</p>
+                <p>username: {follower.login}</p>
+                <p>Location: {follower.location}</p>
+                <a href={follower.url}>{follower.login}'s Github</a>
               </FollowerCard>
             )
           })}
