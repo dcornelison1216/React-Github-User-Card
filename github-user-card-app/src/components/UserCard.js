@@ -3,7 +3,6 @@ import { MainCard, UserImg } from './AppStyles';
 
 class UserCard extends React.Component {
   render() {
-    console.log('this.props.user', this.props.user);
     return (
       <MainCard>
         <UserImg src={this.props.user.avatar_url}></UserImg>
