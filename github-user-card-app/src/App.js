@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import UserCard from './components/UserCard';
 import Followers from './components/Followers';
+import { AppDiv } from './components/AppStyles';
 
 class App extends React.Component {
   state = {
@@ -12,11 +13,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <AppDiv>
         <UserCard user={this.state.user} />
         <h1>{this.state.user.login}'s Followers</h1>
         <Followers followers={this.state.followers} />
-      </div>
+      </AppDiv>
     );
   }
 
