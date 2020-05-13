@@ -8,7 +8,7 @@ class UserCard extends React.Component {
         <Img src={this.props.user.avatar_url}></Img>
         <p>username: {this.props.user.login}</p>
         <p>Location: {this.props.user.location}</p>
-        <a href={this.props.user.url}>{this.props.user.login}'s Github</a>
+        <a href={this.props.user.html_url}>{this.props.user.login}'s Github</a>
 
       </MainCard>
     );
